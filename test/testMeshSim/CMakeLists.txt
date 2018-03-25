@@ -1,0 +1,44 @@
+SET(THIS_EXE_NAME testMeshSim)
+
+
+########################################### BEGIN: GRAB SOURCE FILES ##########################################
+FILE(GLOB THIS_EXE_SRCS RELATIVE_PATH ${CMAKE_CURRENT_SOURCE_DIR} "${CMAKE_CURRENT_SOURCE_DIR}/*.cpp" )
+
+
+
+############################### GRAB HEADERS #####################################
+FILE(GLOB THIS_EXE_HEADERS RELATIVE "${CMAKE_CURRENT_SOURCE_DIR}" 
+									"${CMAKE_CURRENT_SOURCE_DIR}/*.h")
+
+
+INCLUDE_DIRECTORIES(${CMAKE_CURRENT_SOURCE_DIR}/../../include  ${VCG_INCLUDE_DIR})
+LINK_DIRECTORIES(${CMAKE_CURRENT_SOURCE_DIR}/../../bin)
+
+ADD_EXECUTABLE(${THIS_EXE_NAME} ${THIS_EXE_SRCS} ${THIS_EXE_HEADERS} )
+
+TARGET_LINK_LIBRARIES(${THIS_EXE_NAME} CcMeshSim.lib)
+
+SET(EXECUTABLE_OUTPUT_PATH ${CMAKE_CURRENT_SOURCE_DIR}/../../bin)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
