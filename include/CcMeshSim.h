@@ -74,10 +74,4 @@ private:
 
 };
 
-
-
-
-
-
-
 #endif // !CC_MESH_SIM_H
